@@ -3,10 +3,10 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
 
     sf:: Texture texture;
-    if(!texture.loadFromFile("ground.jpg")){
+    if(!texture.loadFromFile("images/ground.jpg")){
         return 0;
     }
     sf::Sprite sprite;
