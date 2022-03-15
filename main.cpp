@@ -1,16 +1,14 @@
 #include <SFML/Graphics.hpp>
+ #include <iostream>
+ #include "personnages.cpp"
+
+using namespace std;
+
 
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
-
-    sf:: Texture texture;
-    if(!texture.loadFromFile("images/ground.jpg")){
-        return 0;
-    }
-    sf::Sprite sprite;
-        sprite.setTexture(texture);
 
     while (window.isOpen())
     {
@@ -21,10 +19,16 @@ int main()
                 window.close();
         }
 
+    //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
+        deplacements();
+
         window.clear();
-        window.draw(sprite);
+        window.draw(sprite_perso);
         window.display();
     }
 
+
+
     return 0;
 }
+
