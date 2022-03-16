@@ -12,23 +12,11 @@ sf::Vector2i anim (1, Down);
 void deplacements(sf::Sprite &sprite_perso){
 
          //Gestion clavier
-           sf::Clock time;
-           float fpsCount = 0, switchFps=100, fpsSpeed=500;
-                bool updateFps = true;
 
-
-           if(updateFps)
-                fpsCount += fpsSpeed * time.restart().asSeconds();
-
-           else;
-            fpsCount = 0;
-
-           if(fpsCount >= switchFps){
-
-          anim.x++;
+        anim.x++;
         if (anim.x * 64 >=personnage.getSize().x)
             anim.x = 0;
-           }
+
 
 
         sprite_perso.setTextureRect(sf::IntRect (anim.x * 64, anim.y * 64, 64, 64));
