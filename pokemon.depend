@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 # depslib dependency file v1.0
 1647271714 source:c:\users\asuki\documents\projetclass\pokemon\pokemon\main.cpp
 	<SFML/Graphics.hpp>
 
 1647271714 hics.hpp>
 
+=======
+# depslib dependency file v1.0
+1647385682 source:c:\users\asuki\documents\projetclass\pokemon\pokemon\main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"personnages.cpp"
+
+>>>>>>> 33969c98f17a7bc3f9857225b22b3c4b69a5bf70
 1646048547 c:\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
 	<SFML/Graphics/BlendMode.hpp>
@@ -468,7 +477,30 @@
 	<SFML/Graphics/PrimitiveType.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
+<<<<<<< HEAD
 
 1647349595 source:/home/hugo/Bureau/pokemon/pokemon/main.cpp
 	<SFML/Graphics.hpp>
 
+=======
+
+1647385754 source:c:\users\asuki\documents\projetclass\pokemon\pokemon\texture.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1647385754 c:\users\asuki\documents\projetclass\pokemon\pokemon\texture.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1647379968 c:\users\asuki\documents\projetclass\pokemon\pokemon\texture.hpp
+	<SFML/Graphics.hpp>
+
+1647385771 c:\users\asuki\documents\projetclass\pokemon\pokemon\personnages.cpp
+	<SFML/Graphics.hpp>
+	"texture.cpp"
+
+1647385771 source:c:\users\asuki\documents\projetclass\pokemon\pokemon\personnages.cpp
+	<SFML/Graphics.hpp>
+	"texture.cpp"
+
+>>>>>>> 33969c98f17a7bc3f9857225b22b3c4b69a5bf70
