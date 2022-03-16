@@ -2,6 +2,8 @@
 1647271714 source:c:\users\asuki\documents\projetclass\pokemon\pokemon\main.cpp
 	<SFML/Graphics.hpp>
 
+1647271714 hics.hpp>
+
 1646048547 c:\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
 	<SFML/Graphics/BlendMode.hpp>
@@ -31,6 +33,8 @@
 	<SFML/Graphics/VertexBuffer.hpp>
 	<SFML/Graphics/View.hpp>
 
+1646048547 hics/View.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\window.hpp
 	<SFML/System.hpp>
 	<SFML/Window/Clipboard.hpp>
@@ -47,6 +51,8 @@
 	<SFML/Window/Window.hpp>
 	<SFML/Window/WindowHandle.hpp>
 	<SFML/Window/WindowStyle.hpp>
+
+1646048548 ow/WindowStyle.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\system.hpp
 	<SFML/Config.hpp>
@@ -68,22 +74,34 @@
 	<SFML/System/Vector2.hpp>
 	<SFML/System/Vector3.hpp>
 
+1646048548 em/Vector3.hpp>
+
 1646048547 c:\sfml-2.5.1\include\sfml\config.hpp
 	"TargetConditionals.h"
+
+1646048547 ditionals.h"
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\clock.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/Time.hpp>
 
+1646048548 em/Time.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\system\export.hpp
 	<SFML/Config.hpp>
+
+1646048548 ig.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\time.hpp
 	<SFML/System/Export.hpp>
 
+1646048548 em/Export.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\system\err.hpp
 	<SFML/System/Export.hpp>
 	<ostream>
+
+1646048548 
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\fileinputstream.hpp
 	<SFML/Config.hpp>
@@ -103,6 +121,8 @@
 1646048548 c:\sfml-2.5.1\include\sfml\system\lock.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/NonCopyable.hpp>
+
+1646048548 em/NonCopyable.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\memoryinputstream.hpp
 	<SFML/Config.hpp>
@@ -126,6 +146,8 @@
 	<string>
 	<SFML/System/String.inl>
 
+1646048548 em/String.inl>
+
 1646048548 c:\sfml-2.5.1\include\sfml\system\utf.hpp
 	<SFML/Config.hpp>
 	<algorithm>
@@ -133,6 +155,8 @@
 	<string>
 	<cstdlib>
 	<SFML/System/Utf.inl>
+
+1646048548 em/Utf.inl>
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\utf.inl
 
@@ -143,6 +167,8 @@
 	<SFML/System/NonCopyable.hpp>
 	<cstdlib>
 	<SFML/System/Thread.inl>
+
+1646048548 em/Thread.inl>
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\thread.inl
 
@@ -155,21 +181,29 @@
 	<SFML/System/ThreadLocal.hpp>
 	<SFML/System/ThreadLocalPtr.inl>
 
+1646048548 em/ThreadLocalPtr.inl>
+
 1646048548 c:\sfml-2.5.1\include\sfml\system\threadlocalptr.inl
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\vector2.hpp
 	<SFML/System/Vector2.inl>
+
+1646048548 em/Vector2.inl>
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\vector2.inl
 
 1646048548 c:\sfml-2.5.1\include\sfml\system\vector3.hpp
 	<SFML/System/Vector3.inl>
 
+1646048548 em/Vector3.inl>
+
 1646048548 c:\sfml-2.5.1\include\sfml\system\vector3.inl
 
 1646048548 c:\sfml-2.5.1\include\sfml\window\clipboard.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/String.hpp>
+
+1646048548 em/String.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\window\export.hpp
 	<SFML/Config.hpp>
@@ -192,6 +226,8 @@
 	<SFML/System/NonCopyable.hpp>
 	<SFML/System/Vector2.hpp>
 
+1646048548 em/Vector2.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\window\event.hpp
 	<SFML/Config.hpp>
 	<SFML/Window/Joystick.hpp>
@@ -199,12 +235,16 @@
 	<SFML/Window/Mouse.hpp>
 	<SFML/Window/Sensor.hpp>
 
+1646048548 ow/Sensor.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\window\joystick.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/String.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\window\keyboard.hpp
 	<SFML/Window/Export.hpp>
+
+1646048548 ow/Export.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\window\mouse.hpp
 	<SFML/Window/Export.hpp>
@@ -244,12 +284,16 @@
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\blendmode.hpp
 	<SFML/Graphics/Export.hpp>
 
+1646048548 hics/Export.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\export.hpp
 	<SFML/Config.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\circleshape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Shape.hpp>
+
+1646048548 hics/Shape.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\shape.hpp
 	<SFML/Graphics/Export.hpp>
@@ -262,10 +306,14 @@
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/RenderStates.hpp>
 
+1646048548 hics/RenderStates.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\renderstates.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/BlendMode.hpp>
 	<SFML/Graphics/Transform.hpp>
+
+1646048548 hics/Transform.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\transform.hpp
 	<SFML/Graphics/Export.hpp>
@@ -276,6 +324,8 @@
 	<SFML/System/Vector2.hpp>
 	<algorithm>
 	<SFML/Graphics/Rect.inl>
+
+1646048548 hics/Rect.inl>
 
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\rect.inl
 
@@ -321,10 +371,14 @@
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Rect.hpp>
 
+1646048548 hics/Rect.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\texture.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Image.hpp>
 	<SFML/Window/GlResource.hpp>
+
+1646048548 ow/GlResource.hpp>
 
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\image.hpp
 	<SFML/Graphics/Export.hpp>
@@ -361,6 +415,8 @@
 	<SFML/Graphics/RenderTarget.hpp>
 	<SFML/Window/ContextSettings.hpp>
 
+1646048548 ow/ContextSettings.hpp>
+
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\renderwindow.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
@@ -384,6 +440,8 @@
 	<SFML/System/Vector2.hpp>
 	<SFML/System/Vector3.hpp>
 	<SFML/Graphics/Glsl.inl>
+
+1646048548 hics/Glsl.inl>
 
 1646048548 c:\sfml-2.5.1\include\sfml\graphics\glsl.inl
 
@@ -410,4 +468,7 @@
 	<SFML/Graphics/PrimitiveType.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
+
+1647349595 source:/home/hugo/Bureau/pokemon/pokemon/main.cpp
+	<SFML/Graphics.hpp>
 
