@@ -2,14 +2,13 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 #include "texture.hpp"
+#include <time.h>
 
 
 using namespace std;
 
 
     sf::Music music;
-
-
 
 void texture(){
 
@@ -38,6 +37,7 @@ int main()
            // audio();
 
 
+
     while (window.isOpen())
     {
 
@@ -53,6 +53,7 @@ int main()
 
         window.clear();
         window.draw(sprite_perso);
+        window.draw(smenu);
         window.display();
     }
 
