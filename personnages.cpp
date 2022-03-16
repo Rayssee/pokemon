@@ -1,7 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include "texture.hpp"
 
-    float speed=2.;
+
+    float speed=0.25;
+
 
 
 void deplacements(sf::Sprite &sprite_perso){

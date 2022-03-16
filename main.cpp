@@ -1,28 +1,33 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
- #include <iostream>
+#include <iostream>
 #include "texture.hpp"
- 
+
+enum Dir{ Down, Left, Right, Up};
+sf::Vector2i anim (1, Down);
+
 
 using namespace std;
 
 sf:: Texture personnage;
     sf:: Sprite sprite_perso;
+    sf::Music music;
+
 
 void texture(){
 
-    if(!personnage.loadFromFile("images/ethan1.png"))
+    if(!personnage.loadFromFile("images/spritev2p1.png"))
             cout<<"ERROR"<<endl;
     sprite_perso.setTexture(personnage);
     sprite_perso.setScale(2.f, 2.f);
     sprite_perso.setPosition(400, 300);
 
+
 }
 
 void audio(){
 
-     sf::Music music;
-    if (!music.openFromFile("son/ville.ogg"))
+         if (!music.openFromFile("son/ville.ogg"))
       cout<<"ERROR"<<endl; // erreur
 
              music.play();
@@ -31,14 +36,20 @@ void audio(){
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!");
 
             texture();
+           // audio();
+            anim.x++;
+        if (anim.x * 64 >=personnage.getSize().x)
+            anim.x = 0;
 
+        sprite_perso.setTextureRect(sf::IntRect (anim.x * -64, anim.y * 128, 128, 128));
     
     
     while (window.isOpen())
     {
+
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -46,13 +57,18 @@ int main()
                 window.close();
         }
 
+        
+    
+
+
+
     //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
         deplacements(sprite_perso);
 
         window.clear();
         window.draw(sprite_perso);
         window.display();
-                     audio();
+    
 
 
     }
