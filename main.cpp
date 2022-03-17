@@ -70,7 +70,7 @@ int main()
 
 
                     check = true;
-                    audio();
+                   // audio();
 
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                     return EXIT_SUCCESS;
