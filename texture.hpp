@@ -10,8 +10,13 @@ void deplacements(sf::Sprite &sprite_perso);
 
      extern sf:: Texture personnage;
     extern sf:: Sprite sprite_perso;
+
+    //gestion FPS
     extern bool updateFPS;
     extern float fpsCount, switchFps, fpsSpeed500;
+
+
+    //timer
     extern sf::Clock timer;
 
 

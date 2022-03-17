@@ -42,6 +42,7 @@ void deplacements(sf::Sprite &sprite_perso){
                 updateFPS = true;
             sprite_perso.move(0, -speed);
 
+
         }
 
                 else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
@@ -65,9 +66,13 @@ void deplacements(sf::Sprite &sprite_perso){
             sprite_perso.move(speed, 0);
         }
 
+
                 else{
                      updateFPS = false;
+                    anim.x=0;
 
 
                 }
          }
+
+

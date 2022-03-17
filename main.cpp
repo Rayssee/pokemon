@@ -9,6 +9,8 @@ using namespace std;
     sf::Music music;
     sf::Texture menu;
     sf::Sprite smenu;
+    sf::Texture mapping;
+    sf::Sprite smap;
     bool check=false;
 
 void texture(){
@@ -16,8 +18,7 @@ void texture(){
     if(!menu.loadFromFile("images/menu-1.png"))
             cout<<"ERROR"<<endl;
     smenu.setTexture(menu);
-    smenu.setPosition(0, 0);
-    smenu.setScale(1.f, 1.1f);
+    smenu.setScale(0.9f, 1.1f);
 
 
 
@@ -27,6 +28,11 @@ void texture(){
     sprite_perso.setTexture(personnage);
     sprite_perso.setScale(2.f, 2.f);
     sprite_perso.setPosition(400, 300);
+
+     if(!mapping.loadFromFile("images/bourgp.png"))
+            cout<<"ERROR"<<endl;
+    smap.setTexture(mapping);
+        smap.setScale(2.9f, 2.9f);
 
 
 }
@@ -42,12 +48,11 @@ void audio(){
 int main()
 {
 
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
-        window.setFramerateLimit(10);
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Pokemon version Or!");
+        window.setFramerateLimit(13);
 
 
             texture();
-            audio();
 
             while (check == false)
             {
@@ -80,6 +85,7 @@ int main()
         deplacements(sprite_perso);
 
         window.clear();
+        window.draw(smap);
         window.draw(sprite_perso);
         window.display();
     }
