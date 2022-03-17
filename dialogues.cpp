@@ -16,7 +16,7 @@ void dial(){
     speed=0;
        if (!bruitdialogue.openFromFile("son/dialogue.ogg"))
       cout<<"ERROR"<<endl; // erreur
-      bruitdialogue.setVolume(350.f);
+      bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
 
