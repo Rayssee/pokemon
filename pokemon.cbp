@@ -52,7 +52,7 @@
 			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
 		</ExtraCommands>
 		<Unit filename="main.cpp" />
-		<Unit filename="texture.cpp" />
+		<Unit filename="personnages.cpp" />
 		<Unit filename="texture.hpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

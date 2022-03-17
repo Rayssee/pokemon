@@ -11,9 +11,13 @@ using namespace std;
     sf::Music music;
     sf::Texture menu;
     sf::Sprite smenu;
-    bool check;
+    bool check=false;
 
 void texture(){
+
+    if(!menu.loadFromFile("images/menu-1.png"))
+            cout<<"ERROR"<<endl;
+    smenu.setTexture(menu);
 
     if(!personnage.loadFromFile("images/spritev2p1.png"))
             cout<<"ERROR"<<endl;
@@ -23,6 +27,11 @@ void texture(){
 
 
 }
+
+
+
+
+
 
 
 void audio(){
@@ -39,6 +48,30 @@ int main()
         sf::Clock time;
             texture();
            // audio();
+
+
+
+
+           while (window.isOpen())
+        {
+            while (check == false)
+            {
+                window.clear();
+                window.draw(smenu);
+                window.display();
+
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+
+                    check = true;
+
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                    return EXIT_SUCCESS;
+            }
+
+}
+
+
+
 
     while (window.isOpen())
     {
