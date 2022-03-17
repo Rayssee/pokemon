@@ -26,7 +26,7 @@ void texture(){
     if(!personnage.loadFromFile("images/spritev2p1.png"))
             cout<<"ERROR"<<endl;
     sprite_perso.setTexture(personnage);
-    sprite_perso.setScale(2.f, 2.f);
+    sprite_perso.setScale(1.3f, 1.3f);
     sprite_perso.setPosition(400, 300);
 
      if(!mapping.loadFromFile("images/bourgp.png"))
