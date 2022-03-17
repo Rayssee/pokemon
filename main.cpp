@@ -12,6 +12,8 @@ using namespace std;
     sf::Texture mapping;
     sf::Sprite smap;
     bool check=false;
+    int screenH=600;
+    int screenW=800;
 
 void texture(){
 
@@ -27,13 +29,12 @@ void texture(){
             cout<<"ERROR"<<endl;
     sprite_perso.setTexture(personnage);
     sprite_perso.setScale(1.3f, 1.3f);
-    sprite_perso.setPosition(400, 300);
+    sprite_perso.setPosition(680, 300);
 
      if(!mapping.loadFromFile("images/bourgp.png"))
             cout<<"ERROR"<<endl;
     smap.setTexture(mapping);
         smap.setScale(2.9f, 2.9f);
-
 
 }
 
@@ -48,8 +49,8 @@ void audio(){
 int main()
 {
 
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Pokemon version Or!");
-        window.setFramerateLimit(13);
+    sf::RenderWindow window(sf::VideoMode(screenW, screenH), "Pokemon version Or!");
+        window.setFramerateLimit(15);
 
 
             texture();
@@ -83,16 +84,14 @@ int main()
 
     //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
         deplacements(sprite_perso);
+        camera();
 
         window.clear();
         window.draw(smap);
         window.draw(sprite_perso);
+        window.setView(cam);
         window.display();
     }
-
-
-
-
 
     return 0;
 }
