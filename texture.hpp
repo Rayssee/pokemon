@@ -6,7 +6,6 @@
 void deplacements(sf::Sprite &sprite_perso);
 void camera();
 void dial();
-void part();
 
 #ifndef PERSONNAGE
 #define PERSONNAGE

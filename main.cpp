@@ -2,6 +2,7 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 #include "texture.hpp"
+#include "dialogues.cpp"
 
 using namespace std;
 
@@ -16,7 +17,6 @@ using namespace std;
     bool check=false;
     int screenH=600;
     int screenW=800;
-    int a=1;
 
 void texture(){
 
@@ -39,36 +39,9 @@ void texture(){
     smap.setTexture(mapping);
         smap.setScale(2.9f, 2.9f);
 
-
-
 }
 
-void test(){
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::E) && (sprite_perso.getPosition().x == 680 && sprite_perso.getPosition().y == 300)){
 
-
-
-
-        dialogue.loadFromFile("images/dialogue.png");
-            cout<<"ERROR"<<endl;
-    sdialogue.setTexture(dialogue);
-    sdialogue.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 150);
-    sdialogue.setScale(1.f, 0.75f);
-    speed=0;
-
-
-}
-if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
-
-a++;
-
-if(a%2==0){
-    sdialogue.setScale(1.f, 0.f);
-    speed=10;
-}
-
-}
-}
 
 
 void audio(){
@@ -117,7 +90,7 @@ int main()
     //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
         deplacements(sprite_perso);
         camera();
-        test();
+        dial();
 
 
         window.clear();
