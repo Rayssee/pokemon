@@ -14,7 +14,7 @@ sf::Clock timer;
 
 
 
-float fpsCount = 0, switchFps = 100, fpsSpeed = 500;
+float fpsCount = 0, switchFps = 100, fpsSpeed = 1000;
 bool updateFPS = true;
 
 void deplacements(sf::Sprite &sprite_perso){

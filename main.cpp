@@ -16,6 +16,11 @@ void texture(){
     if(!menu.loadFromFile("images/menu-1.png"))
             cout<<"ERROR"<<endl;
     smenu.setTexture(menu);
+    smenu.setPosition(0, 0);
+    smenu.setScale(1.f, 1.1f);
+
+
+
 
     if(!personnage.loadFromFile("images/spritev2p1.png"))
             cout<<"ERROR"<<endl;
@@ -42,7 +47,7 @@ int main()
 
 
             texture();
-            //audio();
+            audio();
 
             while (check == false)
             {
@@ -52,7 +57,9 @@ int main()
 
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
 
+
                     check = true;
+                    audio();
 
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                     return EXIT_SUCCESS;
