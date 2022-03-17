@@ -5,7 +5,7 @@
 using namespace std;
 
 
-    float speed=0.05;
+    float speed=10;
     enum Dir {Down, Left, Right, Up};
 sf::Vector2i anim (1, Down);
 sf:: Texture personnage;

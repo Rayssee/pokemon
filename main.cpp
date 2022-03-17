@@ -2,8 +2,6 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 #include "texture.hpp"
-#include <time.h>
-
 
 using namespace std;
 
@@ -29,11 +27,6 @@ void texture(){
 }
 
 
-
-
-
-
-
 void audio(){
 
          if (!music.openFromFile("son/ville.ogg"))
@@ -45,15 +38,12 @@ int main()
 {
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
-        sf::Clock time;
+        window.setFramerateLimit(10);
+
+
             texture();
-           // audio();
+            //audio();
 
-
-
-
-           while (window.isOpen())
-        {
             while (check == false)
             {
                 window.clear();
@@ -67,10 +57,6 @@ int main()
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                     return EXIT_SUCCESS;
             }
-
-}
-
-
 
 
     while (window.isOpen())
@@ -90,6 +76,10 @@ int main()
         window.draw(sprite_perso);
         window.display();
     }
+
+
+
+
 
     return 0;
 }
