@@ -2,30 +2,51 @@
 #include "texture.hpp"
 #include <iostream>
 #include <SFML/Audio.hpp>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 
 int a=1;
 sf::Music bruitdialogue;
 using namespace std;
 
-void dial(){
+void s_sleep(int seconds) {
+    /* Init. */
+    time_t start_time = 0;
+    time_t current_time = 0;
 
+    /* Operate. */
+    start_time = time(NULL);
+    while(current_time-start_time+1 <= seconds) {
+        current_time = time(NULL);
+    }
+}
+
+void dial(){
 
 if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
 a++;
 
 if (sprite_perso.getPosition().x == 680 && sprite_perso.getPosition().y == 300){
+
         dialogue.loadFromFile("images/dialogue.png");
     sdialogue.setTexture(dialogue);
     sdialogue.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 150);
     sdialogue.setScale(1.f, 0.75f);
     speed=0;
 
+
+
        if (!bruitdialogue.openFromFile("son/dialogue.ogg"))
       cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
+
+     /*puts("Waiting...");
+    s_sleep(1);
+    puts("Done.");*/
 
 
 if(a%2==0){
@@ -35,6 +56,13 @@ if(a%2==0){
 }
 }
 }
+
+
+
+
+
+
+
 
 
 
