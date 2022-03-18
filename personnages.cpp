@@ -86,15 +86,18 @@ void deplacements(sf::Sprite &sprite_perso){
             if (sprite_perso.getPosition().y <= 0)
             sprite_perso.setPosition(sf::Vector2f(sprite_perso.getPosition().x, 0));
 
+
             cam.reset(sf::FloatRect(0,0,800,600));
             sf::Vector2f position(400/*screenW / 2*/ ,300/*screenH / 2*/);
             position.x= sprite_perso.getPosition().x + (64 / 2) - (800 / 2); //32= la moitié de la taille du personnage
             position.y= sprite_perso.getPosition().y + (64 / 2) - (600 / 2);
 
+
             if(position.x < 0)
                 position.x=0;
             if(position.y < 0)
                 position.y=0;
+
                 cam.reset(sf::FloatRect(position.x, position.y, 800, 600));
 
          }

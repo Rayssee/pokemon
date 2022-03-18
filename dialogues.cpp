@@ -23,7 +23,6 @@ void dial(){
              bruitdialogue.play();
 
 
-}
 if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
 
 a++;
@@ -34,3 +33,12 @@ if(a%2==0){
 }
 }
 }
+
+}
+
+
+
+
+
+
+
