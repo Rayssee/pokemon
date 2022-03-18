@@ -98,6 +98,7 @@ void deplacements(sf::Sprite &sprite_perso){
             if(position.y < 0)
                 position.y=0;
 
+
                 cam.reset(sf::FloatRect(position.x, position.y, 800, 600));
 
          }

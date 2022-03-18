@@ -40,9 +40,6 @@ void texture(){
 
 }
 
-
-
-
 void audio(){
 
          if (!music.openFromFile("son/ville.ogg"))
