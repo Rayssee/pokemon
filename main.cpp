@@ -2,7 +2,6 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 #include "texture.hpp"
-#include "dialogues.cpp"
 
 using namespace std;
 

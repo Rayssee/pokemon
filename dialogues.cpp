@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include "texture.hpp"
 #include <iostream>
+#include <SFML/Audio.hpp>
+
 
 int a=1;
 sf::Music bruitdialogue;
