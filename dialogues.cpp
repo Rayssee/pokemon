@@ -30,7 +30,7 @@ a++;
 
 if (sprite_perso.getPosition().x == 680 && sprite_perso.getPosition().y == 300){
 
-        dialogue.loadFromFile("images/dialogue.png");
+        dialogue.loadFromFile("images/boumaaz.png");
     sdialogue.setTexture(dialogue);
     sdialogue.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 150);
     sdialogue.setScale(1.f, 0.75f);
@@ -38,15 +38,13 @@ if (sprite_perso.getPosition().x == 680 && sprite_perso.getPosition().y == 300){
 
 
 
-       if (!bruitdialogue.openFromFile("son/dialogue.ogg"))
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
       cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
 
-     /*puts("Waiting...");
-    s_sleep(1);
-    puts("Done.");*/
+
 
 
 if(a%2==0){
@@ -54,8 +52,184 @@ if(a%2==0){
     speed=10;
 }
 }
+
+
+if (sprite_perso.getPosition().x == 260 && sprite_perso.getPosition().y == 300){
+
+        dialogue.loadFromFile("images/minart.png");
+    sdialogue.setTexture(dialogue);
+    sdialogue.setPosition(sprite_perso.getPosition().x - 260, sprite_perso.getPosition().y + 150);
+    sdialogue.setScale(1.f, 0.75f);
+    speed=0;
+
+
+
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
+      cout<<"ERROR"<<endl; // erreur
+      bruitdialogue.setVolume(100.f);
+
+             bruitdialogue.play();
+
+
+
+
+if(a%2==0){
+    sdialogue.setScale(1.f, 0.f);
+    speed=10;
 }
 }
+
+if (sprite_perso.getPosition().x == 590 && sprite_perso.getPosition().y == 300){
+
+        dialogue.loadFromFile("images/dialogueboite1.png");
+    sdialogue.setTexture(dialogue);
+    sdialogue.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 150);
+    sdialogue.setScale(1.f, 0.75f);
+    speed=0;
+
+
+
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
+      cout<<"ERROR"<<endl; // erreur
+      bruitdialogue.setVolume(100.f);
+
+             bruitdialogue.play();
+
+if(a%2==0){
+    sdialogue.setScale(1.f, 0.f);
+    speed=10;
+}
+}
+
+if (sprite_perso.getPosition().x == 170 && sprite_perso.getPosition().y == 300){
+
+        dialogue.loadFromFile("images/dialogueboite1.png");
+    sdialogue.setTexture(dialogue);
+    sdialogue.setPosition(sprite_perso.getPosition().x - 170, sprite_perso.getPosition().y + 150);
+    sdialogue.setScale(1.f, 0.75f);
+    speed=0;
+
+
+
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
+      cout<<"ERROR"<<endl; // erreur
+      bruitdialogue.setVolume(100.f);
+
+             bruitdialogue.play();
+
+
+
+
+if(a%2==0){
+    sdialogue.setScale(1.f, 0.f);
+    speed=10;
+}
+
+
+}
+
+if (sprite_perso.getPosition().x == 400 && sprite_perso.getPosition().y == 490){
+
+        dialogue.loadFromFile("images/fleurdialogue.png");
+    sdialogue.setTexture(dialogue);
+    sdialogue.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 150);
+    sdialogue.setScale(1.f, 0.75f);
+    speed=0;
+
+
+
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
+      cout<<"ERROR"<<endl; // erreur
+      bruitdialogue.setVolume(100.f);
+
+             bruitdialogue.play();
+
+
+
+
+if(a%2==0){
+    sdialogue.setScale(1.f, 0.f);
+    speed=10;
+}
+}
+if (sprite_perso.getPosition().x == 210 && sprite_perso.getPosition().y == 620){
+
+        dialogue.loadFromFile("images/dtexte.png");
+    sdialogue.setTexture(dialogue);
+    sdialogue.setPosition(sprite_perso.getPosition().x - 210, sprite_perso.getPosition().y + 112);
+    sdialogue.setScale(1.f, 0.75f);
+    speed=0;
+
+
+
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
+      cout<<"ERROR"<<endl; // erreur
+      bruitdialogue.setVolume(100.f);
+
+             bruitdialogue.play();
+
+
+
+
+if(a%2==0){
+    sdialogue.setScale(1.f, 0.f);
+    speed=10;
+}
+}
+
+if (sprite_perso.getPosition().x == 720 && sprite_perso.getPosition().y == 580){
+
+        dialogue.loadFromFile("images/Alan.png");
+    sdialogue.setTexture(dialogue);
+    sdialogue.setPosition(sprite_perso.getPosition().x - 408, sprite_perso.getPosition().y + 150);
+    sdialogue.setScale(1.f, 0.75f);
+    speed=0;
+
+
+
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
+      cout<<"ERROR"<<endl; // erreur
+      bruitdialogue.setVolume(100.f);
+
+             bruitdialogue.play();
+
+
+
+
+if(a%2==0){
+    sdialogue.setScale(1.f, 0.f);
+    speed=10;
+}
+}
+if (sprite_perso.getPosition().x == 580 && sprite_perso.getPosition().y == 300){
+
+        dialogue.loadFromFile("images/dialogueboite1.png");
+    sdialogue.setTexture(dialogue);
+    sdialogue.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 150);
+    sdialogue.setScale(1.f, 0.75f);
+    speed=0;
+
+
+
+       if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
+      cout<<"ERROR"<<endl; // erreur
+      bruitdialogue.setVolume(100.f);
+
+             bruitdialogue.play();
+
+
+
+
+if(a%2==0){
+    sdialogue.setScale(1.f, 0.f);
+    speed=10;
+}
+}
+
+
+}
+}
+
 
 
 

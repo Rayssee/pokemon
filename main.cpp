@@ -1,10 +1,16 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <iostream>
+#include <cmath>
 #include "texture.hpp"
+
 
 using namespace std;
 
+        bool check=false;
+    int screenH=600;
+    int screenW=800;
+    int b=1;
 
     sf::Music music;
     sf::Texture menu;
@@ -13,9 +19,11 @@ using namespace std;
     sf::Sprite smap;
     sf::Texture dialogue;
     sf::Sprite sdialogue;
-    bool check=false;
-    int screenH=600;
-    int screenW=800;
+    sf::Texture pauses;
+    sf::Sprite spause;
+
+
+
 
 void texture(){
 
@@ -38,6 +46,7 @@ void texture(){
     smap.setTexture(mapping);
         smap.setScale(2.9f, 2.9f);
 
+
 }
 
 void audio(){
@@ -47,6 +56,29 @@ void audio(){
 
              music.play();
 }
+
+         void collisions(){
+
+
+}
+
+void pause(){
+
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
+        b++;
+                if(b%2==0){
+                 if(!pauses.loadFromFile("images/pauseyes.png"))
+                cout<<"ERROR"<<endl;
+            spause.setTexture(pauses);
+            spause.setPosition(400,300);
+            spause.setScale(0.7f, 0.7f);
+            speed=0;
+            smap.setColor(sf::Color(255, 255, 255, 50));
+                }
+}
+}
+
 int main()
 {
 
@@ -55,6 +87,8 @@ int main()
 
 
             texture();
+
+
 
             while (check == false)
             {
@@ -66,7 +100,7 @@ int main()
 
 
                     check = true;
-                    audio();
+                    //audio();
 
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                     return EXIT_SUCCESS;
@@ -76,6 +110,7 @@ int main()
     while (window.isOpen())
     {
 
+
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -84,19 +119,32 @@ int main()
         }
 
     //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
+
+
         deplacements(sprite_perso);
         camera();
         dial();
+        collisions();
+        pause();
+
 
 
         window.clear();
         window.draw(smap);
         window.draw(sdialogue);
         window.draw(sprite_perso);
+        window.draw(spause);
         window.setView(cam);
         window.display();
-    }
 
+
+    }
     return 0;
 }
+
+
+
+
+
+
 

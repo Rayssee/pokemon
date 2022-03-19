@@ -6,6 +6,7 @@
 void deplacements(sf::Sprite &sprite_perso);
 void camera();
 void dial();
+void pause();
 
 #ifndef PERSONNAGE
 #define PERSONNAGE
@@ -17,6 +18,8 @@ void dial();
     extern sf::Texture dialogue;
     extern sf::Sprite sdialogue;
     extern float speed;
+    extern sf::Sprite smap;
+
 
 
     //gestion FPS
