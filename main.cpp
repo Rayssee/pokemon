@@ -78,6 +78,7 @@ int main()
 
             texture();
 
+
             while (check == false)
             {
                 window.clear();
@@ -88,6 +89,7 @@ int main()
 
 
                     check = true;
+
                     //audio();
 
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
@@ -108,16 +110,16 @@ int main()
 
     //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
 
-
          if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
-        b++;
         check2=true;
+        b++;
+        det=0;
 
 
          if(!pauses.loadFromFile("images/pauseyes.png"))
                 cout<<"ERROR"<<endl;
             spause.setTexture(pauses);
-            spause.setPosition(400,300);
+            spause.setPosition(sprite_perso.getPosition().x -250, sprite_perso.getPosition().y -50);
             spause.setScale(0.7f, 0.7f);
             speed=0;
             smap.setColor(sf::Color(255, 255, 255, 50));
@@ -125,14 +127,12 @@ int main()
             }
 
                 if(b%2==1){
-                    check2=false;
-
+        speed=10;
+        check2=false;
         spause.setScale(0.f, 0.f);
         spause2.setScale(0.f, 0.f);
         smap.setColor(sf::Color(255, 255, 255, 255));
                 }
-
-
 
                                 if(check2==true) {
 
@@ -140,7 +140,7 @@ int main()
            if(!pause2.loadFromFile("images/pauseno.png"))
                 cout<<"ERROR"<<endl;
             spause2.setTexture(pause2);
-             spause2.setPosition(400,300);
+            spause2.setPosition(sprite_perso.getPosition().x -250, sprite_perso.getPosition().y -50);
             spause2.setScale(0.7f, 0.7f);
             det=2;
             spause.setScale(0.f, 0.f);
@@ -154,18 +154,16 @@ int main()
                          if(!pauses.loadFromFile("images/pauseyes.png"))
                 cout<<"ERROR"<<endl;
             spause.setTexture(pauses);
-            spause.setPosition(400,300);
+            spause.setPosition(sprite_perso.getPosition().x -250, sprite_perso.getPosition().y -50);
             spause.setScale(0.7f, 0.7f);
             det=1;
+
            }
 
                            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && det==2){
 
-                    b=3;
                     speed=10;
-
-
-
+                    b=3;
                 }
 
 
@@ -177,11 +175,10 @@ int main()
 
         }
 
-        dial();
         deplacements(sprite_perso);
         camera();
         collisions();
-
+        dial();
 
 
         window.clear();

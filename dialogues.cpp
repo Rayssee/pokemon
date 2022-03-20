@@ -36,7 +36,6 @@ if (sprite_perso.getPosition().x == 680 && sprite_perso.getPosition().y == 300){
     speed=0;
 
 
-
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
       cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);

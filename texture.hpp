@@ -7,6 +7,7 @@ void deplacements(sf::Sprite &sprite_perso);
 void camera();
 void dial();
 void pause();
+void menupoke();
 
 #ifndef PERSONNAGE
 #define PERSONNAGE
@@ -24,7 +25,7 @@ void pause();
 
     //gestion FPS
     extern bool updateFPS;
-    extern float fpsCount, switchFps, fpsSpeed500;
+    extern float fpsCount, switchFps, fpsSpeed;
 
 
     //timer
