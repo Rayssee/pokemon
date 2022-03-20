@@ -27,7 +27,6 @@ void dial(){
 
 if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
 a++;
-
 if (sprite_perso.getPosition().x == 680 && sprite_perso.getPosition().y == 300){
 
         dialogue.loadFromFile("images/boumaaz.png");
@@ -51,6 +50,7 @@ if(a%2==0){
     sdialogue.setScale(1.f, 0.f);
     speed=10;
 }
+
 }
 
 

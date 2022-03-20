@@ -7,10 +7,12 @@
 
 using namespace std;
 
-        bool check=false;
+    bool check=false;
     int screenH=600;
     int screenW=800;
     int b=1;
+    int det=0;
+    bool check2=false;
 
     sf::Music music;
     sf::Texture menu;
@@ -21,6 +23,8 @@ using namespace std;
     sf::Sprite sdialogue;
     sf::Texture pauses;
     sf::Sprite spause;
+    sf::Texture pause2;
+    sf::Sprite spause2;
 
 
 
@@ -62,22 +66,8 @@ void audio(){
 
 }
 
-void pause(){
 
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
-        b++;
-                if(b%2==0){
-                 if(!pauses.loadFromFile("images/pauseyes.png"))
-                cout<<"ERROR"<<endl;
-            spause.setTexture(pauses);
-            spause.setPosition(400,300);
-            spause.setScale(0.7f, 0.7f);
-            speed=0;
-            smap.setColor(sf::Color(255, 255, 255, 50));
-                }
-}
-}
 
 int main()
 {
@@ -87,8 +77,6 @@ int main()
 
 
             texture();
-
-
 
             while (check == false)
             {
@@ -121,11 +109,78 @@ int main()
     //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
 
 
+         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+        b++;
+        check2=true;
+
+
+         if(!pauses.loadFromFile("images/pauseyes.png"))
+                cout<<"ERROR"<<endl;
+            spause.setTexture(pauses);
+            spause.setPosition(400,300);
+            spause.setScale(0.7f, 0.7f);
+            speed=0;
+            smap.setColor(sf::Color(255, 255, 255, 50));
+            det=1;
+            }
+
+                if(b%2==1){
+                    check2=false;
+
+        spause.setScale(0.f, 0.f);
+        spause2.setScale(0.f, 0.f);
+        smap.setColor(sf::Color(255, 255, 255, 255));
+                }
+
+
+
+                                if(check2==true) {
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+           if(!pause2.loadFromFile("images/pauseno.png"))
+                cout<<"ERROR"<<endl;
+            spause2.setTexture(pause2);
+             spause2.setPosition(400,300);
+            spause2.setScale(0.7f, 0.7f);
+            det=2;
+            spause.setScale(0.f, 0.f);
+
+
+           }
+
+                  if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+
+                b=2;
+                         if(!pauses.loadFromFile("images/pauseyes.png"))
+                cout<<"ERROR"<<endl;
+            spause.setTexture(pauses);
+            spause.setPosition(400,300);
+            spause.setScale(0.7f, 0.7f);
+            det=1;
+           }
+
+                           if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && det==2){
+
+                    b=3;
+                    speed=10;
+
+
+
+                }
+
+
+                 if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && det==1){
+
+                    return EXIT_SUCCESS;
+                 }
+
+
+        }
+
+        dial();
         deplacements(sprite_perso);
         camera();
-        dial();
         collisions();
-        pause();
 
 
 
@@ -133,6 +188,7 @@ int main()
         window.draw(smap);
         window.draw(sdialogue);
         window.draw(sprite_perso);
+        window.draw(spause2);
         window.draw(spause);
         window.setView(cam);
         window.display();

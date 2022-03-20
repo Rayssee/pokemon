@@ -72,8 +72,6 @@ void deplacements(sf::Sprite &sprite_perso){
                 else{
                      updateFPS = false;
                     anim.x=0;
-
-
                 }
                 cout<<sprite_perso.getPosition().x<< ","<< sprite_perso.getPosition().y<<endl;
          }
