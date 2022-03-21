@@ -115,7 +115,6 @@ int main()
         b++;
         det=0;
 
-
          if(!pauses.loadFromFile("images/pauseyes.png"))
                 cout<<"ERROR"<<endl;
             spause.setTexture(pauses);
@@ -127,7 +126,6 @@ int main()
             }
 
                 if(b%2==1){
-        speed=10;
         check2=false;
         spause.setScale(0.f, 0.f);
         spause2.setScale(0.f, 0.f);
