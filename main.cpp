@@ -79,8 +79,26 @@ int main()
             texture();
 
 
-            while (check == false)
+           
+
+
+    while (window.isOpen())
+    {
+
+
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+         while (check == false)
             {
+                 while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
                 window.clear();
                 window.draw(smenu);
                 window.display();
@@ -96,17 +114,6 @@ int main()
                     return EXIT_SUCCESS;
             }
 
-
-    while (window.isOpen())
-    {
-
-
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
 
     //j'appelle le texture.cpp dans le personnages.cpp pour les deplacements et tout ca reviens dans le main, le .hpp sert à crée ses fonctions rappelez
 
