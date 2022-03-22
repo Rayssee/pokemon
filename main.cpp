@@ -2,6 +2,7 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 #include <cmath>
+#include <vector>
 #include "texture.hpp"
 
 
@@ -13,6 +14,22 @@ using namespace std;
     int b=1;
     int det=0;
     bool check2=false;
+    int offsetX =32, offsetY=32;
+    int tabmap[10][10] =
+    {
+
+        {0,0,0,0,0,0,0,0,0,0}
+        {0,0,0,0,0,0,0,0,0,0}
+        {0,0,0,0,0,1,0,0,0,0}
+        {0,0,0,0,0,1,0,0,0,0}
+        {0,0,0,0,0,1,1,0,0,0}
+        {0,0,0,0,0,0,0,0,0,0}
+        {0,0,0,0,0,0,0,0,0,0}
+        {0,0,0,0,0,0,0,0,0,0}
+        {0,0,0,0,0,0,0,0,0,0}
+        {0,0,0,0,0,0,0,0,0,0}
+
+    }
 
     sf::Music music;
     sf::Texture menu;
@@ -25,6 +42,8 @@ using namespace std;
     sf::Sprite spause;
     sf::Texture pause2;
     sf::Sprite spause2;
+    sf::RectangleShape box(sf::Vector2f(offsetX, offsetY));
+    vector<RectangleShape>vecBox;
 
 
 
@@ -63,6 +82,19 @@ void audio(){
 
          void collisions(){
 
+for (int y=0; y<10;y++)
+{
+    for(int x=0; x<10; x++)
+    {
+        if(tabmap[y][x] == 1){
+
+            box.setFillColor(sf::Color::Red);
+            box.setPosition(sf::Vector2f(x*offsetX, y*offsetY));
+            vecBox.push_back(box);
+        }
+    }
+}
+
 
 }
 
@@ -94,11 +126,7 @@ int main()
         }
          while (check == false)
             {
-                 while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+
                 window.clear();
                 window.draw(smenu);
                 window.display();
@@ -189,6 +217,8 @@ int main()
 
         window.clear();
         window.draw(smap);
+        for(int i=0; i < vecBox.size(); i++)
+        window.draw(vecBox[i]);
         window.draw(sdialogue);
         window.draw(sprite_perso);
         window.draw(spause2);
@@ -200,10 +230,3 @@ int main()
     }
     return 0;
 }
-
-
-
-
-
-
-

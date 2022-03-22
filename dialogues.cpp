@@ -178,7 +178,7 @@ if(a%2==0){
 
 if (sprite_perso.getPosition().x == 720 && sprite_perso.getPosition().y == 580){
 
-        dialogue.loadFromFile("images/Alan.png");
+        dialogue.loadFromFile("images/alan.png");
     sdialogue.setTexture(dialogue);
     sdialogue.setPosition(sprite_perso.getPosition().x - 408, sprite_perso.getPosition().y + 150);
     sdialogue.setScale(1.f, 0.75f);
