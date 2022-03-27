@@ -20,6 +20,8 @@ void menupoke();
     extern sf::Sprite sdialogue;
     extern float speed;
     extern sf::Sprite smap;
+    extern sf::Vector2f positions;
+    extern sf::View cam;
 
 
 

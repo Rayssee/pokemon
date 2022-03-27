@@ -14,6 +14,8 @@ using namespace std;
     int det=0;
     bool check2=false;
 
+//sf::RectangleShape maison1(sf::Vector2f(120.f, 50.f));
+
     sf::Music music;
     sf::Texture menu;
     sf::Sprite smenu;
@@ -51,6 +53,8 @@ void texture(){
         smap.setScale(2.9f, 2.9f);
 
 
+
+
 }
 
 void audio(){
@@ -68,18 +72,45 @@ void audio(){
 
 
 
-
 int main()
 {
 
     sf::RenderWindow window(sf::VideoMode(screenW, screenH), "Pokemon version Or!");
         window.setFramerateLimit(15);
 
-
             texture();
 
+            int offsetX = 32, offsetY=32;
+            sf::Vector2f previous;
+            int tabmap[10][10] =
+            {
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,1,1},
+                {0,0,0,0,0,0,0,0,1,1},
+                {0,0,0,0,0,0,0,0,1,1},
+                {0,0,0,0,0,0,0,0,1,1},
+                {0,0,0,0,0,0,0,0,1,1}
+            };
 
-           
+            vector<sf::RectangleShape>vecBox;
+
+            for (int y=0; y<10; y++)
+            {
+                for(int x=0; x<10; x++)
+                {
+                    if(tabmap[y][x] == 1)
+                    {
+                        sf::RectangleShape box(sf::Vector2f(offsetX, offsetY));
+                        box.setFillColor(sf::Color::Red);
+                        box.setPosition (sf::Vector2f(x*offsetX, y*offsetY));
+                        vecBox.push_back(box);
+                    }
+                }
+            }
 
 
     while (window.isOpen())
@@ -176,19 +207,38 @@ int main()
 
                     return EXIT_SUCCESS;
                  }
-
-
         }
 
         deplacements(sprite_perso);
         camera();
-        collisions();
         dial();
 
+
+            previous.x= sprite_perso.getPosition().x;
+            previous.y= sprite_perso.getPosition().y;
+
+                for (int y=0; y<10; y++)
+            {
+                for(int x=0; x<10; x++)
+                {
+                    int top= y*offsetY;
+                    int bottom=y*offsetY+offsetY;
+                    int left= x*offsetX;
+                    int right=x*offsetX+offsetX;
+
+                    if(tabmap[y][x] == 1 && sprite_perso.getPosition().x+offsetX >= left && sprite_perso.getPosition().x <= right && sprite_perso.getPosition().y+offsetY >= top && sprite_perso.getPosition().y <= bottom)
+                    {
+                    sprite_perso.getPosition().x= previous.x;
+                    sprite_perso.getPosition().y= previous.y;
+                    }
+                }
+            }
 
         window.clear();
         window.draw(smap);
         window.draw(sdialogue);
+        for(int i=0; i < vecBox.size(); i++)
+        window.draw(vecBox[i]);
         window.draw(sprite_perso);
         window.draw(spause2);
         window.draw(spause);
