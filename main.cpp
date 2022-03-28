@@ -15,22 +15,7 @@ using namespace std;
     int det=0;
     bool check2=false;
     int offsetX =32, offsetY=32;
-    int tabmap[10][10] =
-    {
-
-        {0,0,0,0,0,0,0,0,0,0}
-        {0,0,0,0,0,0,0,0,0,0}
-        {0,0,0,0,0,1,0,0,0,0}
-        {0,0,0,0,0,1,0,0,0,0}
-        {0,0,0,0,0,1,1,0,0,0}
-        {0,0,0,0,0,0,0,0,0,0}
-        {0,0,0,0,0,0,0,0,0,0}
-        {0,0,0,0,0,0,0,0,0,0}
-        {0,0,0,0,0,0,0,0,0,0}
-        {0,0,0,0,0,0,0,0,0,0}
-
-    }
-
+   
 //sf::RectangleShape maison1(sf::Vector2f(120.f, 50.f));
 
     sf::Music music;
@@ -45,7 +30,21 @@ using namespace std;
     sf::Texture pause2;
     sf::Sprite spause2;
     sf::RectangleShape box(sf::Vector2f(offsetX, offsetY));
-    vector<RectangleShape>vecBox;
+    vector<sf::RectangleShape>vecBox;
+
+                int tabmap[10][10] =
+            {
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,1,1,1,1,1},
+                {0,0,0,0,0,1,1,1,1,1},
+                {0,0,0,0,0,1,1,1,1,1},
+                {0,0,0,0,0,1,1,1,1,1},
+                {0,0,0,0,0,1,1,1,1,1}
+            };
 
 
 
@@ -114,21 +113,8 @@ int main()
 
             int offsetX = 32, offsetY=32;
             sf::Vector2f previous;
-            int tabmap[10][10] =
-            {
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,1,1},
-                {0,0,0,0,0,0,0,0,1,1},
-                {0,0,0,0,0,0,0,0,1,1},
-                {0,0,0,0,0,0,0,0,1,1},
-                {0,0,0,0,0,0,0,0,1,1}
-            };
 
-            vector<sf::RectangleShape>vecBox;
+
 
             for (int y=0; y<10; y++)
             {
@@ -256,16 +242,13 @@ int main()
 
                     if(tabmap[y][x] == 1 && sprite_perso.getPosition().x+offsetX >= left && sprite_perso.getPosition().x <= right && sprite_perso.getPosition().y+offsetY >= top && sprite_perso.getPosition().y <= bottom)
                     {
-                    sprite_perso.getPosition().x= previous.x;
-                    sprite_perso.getPosition().y= previous.y;
+                            cout<<"yut"<<endl;
                     }
                 }
             }
 
         window.clear();
         window.draw(smap);
-        for(int i=0; i < vecBox.size(); i++)
-        window.draw(vecBox[i]);
         window.draw(sdialogue);
         for(int i=0; i < vecBox.size(); i++)
         window.draw(vecBox[i]);
