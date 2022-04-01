@@ -8,6 +8,7 @@ void camera();
 void dial();
 void pause();
 void menupoke();
+void collisions();
 
 #ifndef PERSONNAGE
 #define PERSONNAGE
@@ -22,6 +23,11 @@ void menupoke();
     extern sf::Sprite smap;
     extern sf::Vector2f positions;
     extern sf::View cam;
+    extern sf::RenderWindow window;
+    extern sf::Texture stinky;
+    extern sf::Sprite sstinky;
+
+
 
 
 

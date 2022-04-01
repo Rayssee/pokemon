@@ -15,7 +15,7 @@ using namespace std;
     int det=0;
     bool check2=false;
     int offsetX =32, offsetY=32;
-   
+
 //sf::RectangleShape maison1(sf::Vector2f(120.f, 50.f));
 
     sf::Music music;
@@ -29,24 +29,8 @@ using namespace std;
     sf::Sprite spause;
     sf::Texture pause2;
     sf::Sprite spause2;
-    sf::RectangleShape box(sf::Vector2f(offsetX, offsetY));
-    vector<sf::RectangleShape>vecBox;
-
-                int tabmap[10][10] =
-            {
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,1,1,1,1,1},
-                {0,0,0,0,0,1,1,1,1,1},
-                {0,0,0,0,0,1,1,1,1,1},
-                {0,0,0,0,0,1,1,1,1,1},
-                {0,0,0,0,0,1,1,1,1,1}
-            };
-
-
+    sf::Texture stinky;
+    sf::Sprite sstinky;
 
 
 void texture(){
@@ -71,7 +55,11 @@ void texture(){
         smap.setScale(2.9f, 2.9f);
 
 
-
+    if(!stinky.loadFromFile("images/stinky.png"))
+            cout<<"ERROR"<<endl;
+    sstinky.setTexture(stinky);
+    sstinky.setScale(0.4f, 0.4f);
+    sstinky.setPosition(565, 10);
 
 }
 
@@ -83,26 +71,6 @@ void audio(){
              music.play();
 }
 
-         void collisions(){
-
-for (int y=0; y<10;y++)
-{
-    for(int x=0; x<10; x++)
-    {
-        if(tabmap[y][x] == 1){
-
-            box.setFillColor(sf::Color::Red);
-            box.setPosition(sf::Vector2f(x*offsetX, y*offsetY));
-            vecBox.push_back(box);
-        }
-    }
-}
-
-
-}
-
-
-
 int main()
 {
 
@@ -110,25 +78,6 @@ int main()
         window.setFramerateLimit(15);
 
             texture();
-
-            int offsetX = 32, offsetY=32;
-            sf::Vector2f previous;
-
-
-
-            for (int y=0; y<10; y++)
-            {
-                for(int x=0; x<10; x++)
-                {
-                    if(tabmap[y][x] == 1)
-                    {
-                        sf::RectangleShape box(sf::Vector2f(offsetX, offsetY));
-                        box.setFillColor(sf::Color::Red);
-                        box.setPosition (sf::Vector2f(x*offsetX, y*offsetY));
-                        vecBox.push_back(box);
-                    }
-                }
-            }
 
 
     while (window.isOpen())
@@ -226,32 +175,13 @@ int main()
         deplacements(sprite_perso);
         camera();
         dial();
+        collisions();
 
-
-            previous.x= sprite_perso.getPosition().x;
-            previous.y= sprite_perso.getPosition().y;
-
-                for (int y=0; y<10; y++)
-            {
-                for(int x=0; x<10; x++)
-                {
-                    int top= y*offsetY;
-                    int bottom=y*offsetY+offsetY;
-                    int left= x*offsetX;
-                    int right=x*offsetX+offsetX;
-
-                    if(tabmap[y][x] == 1 && sprite_perso.getPosition().x+offsetX >= left && sprite_perso.getPosition().x <= right && sprite_perso.getPosition().y+offsetY >= top && sprite_perso.getPosition().y <= bottom)
-                    {
-                            cout<<"yut"<<endl;
-                    }
-                }
-            }
 
         window.clear();
         window.draw(smap);
         window.draw(sdialogue);
-        for(int i=0; i < vecBox.size(); i++)
-        window.draw(vecBox[i]);
+        window.draw(sstinky);
         window.draw(sprite_perso);
         window.draw(spause2);
         window.draw(spause);
