@@ -9,6 +9,8 @@ void dial();
 void pause();
 void menupoke();
 void collisions();
+void history();
+void texture();
 
 #ifndef PERSONNAGE
 #define PERSONNAGE
@@ -19,6 +21,8 @@ void collisions();
     extern sf::View cam;
     extern sf::Texture dialogue;
     extern sf::Sprite sdialogue;
+    extern sf::Texture dialogue2;
+    extern sf::Sprite sdialogue2;
     extern float speed;
     extern sf::Sprite smap;
     extern sf::Vector2f positions;
@@ -31,9 +35,12 @@ void collisions();
 
 
 
+
+
     //gestion FPS
     extern bool updateFPS;
     extern float fpsCount, switchFps, fpsSpeed;
+    extern int incre;
 
 
     //timer

@@ -33,6 +33,7 @@ using namespace std;
     sf::Sprite sstinky;
 
 
+
 void texture(){
 
     if(!menu.loadFromFile("images/menu-1.png"))
@@ -175,12 +176,15 @@ int main()
         deplacements(sprite_perso);
         camera();
         dial();
+        history();
         collisions();
+
 
 
         window.clear();
         window.draw(smap);
         window.draw(sdialogue);
+        window.draw(sdialogue2);
         window.draw(sstinky);
         window.draw(sprite_perso);
         window.draw(spause2);

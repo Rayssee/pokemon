@@ -7,21 +7,10 @@
 #include <time.h>
 
 
-int a=1;
+int a=0;
 sf::Music bruitdialogue;
 using namespace std;
 
-void s_sleep(int seconds) {
-    /* Init. */
-    time_t start_time = 0;
-    time_t current_time = 0;
-
-    /* Operate. */
-    start_time = time(NULL);
-    while(current_time-start_time+1 <= seconds) {
-        current_time = time(NULL);
-    }
-}
 
 void dial(){
 
@@ -89,7 +78,6 @@ if (sprite_perso.getPosition().x == 590 && sprite_perso.getPosition().y == 300){
 
 
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
-      cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
@@ -111,7 +99,6 @@ if (sprite_perso.getPosition().x == 170 && sprite_perso.getPosition().y == 300){
 
 
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
-      cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
@@ -138,7 +125,6 @@ if (sprite_perso.getPosition().x == 400 && sprite_perso.getPosition().y == 490){
 
 
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
-      cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
@@ -162,7 +148,6 @@ if (sprite_perso.getPosition().x == 210 && sprite_perso.getPosition().y == 620){
 
 
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
-      cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
@@ -187,7 +172,6 @@ if (sprite_perso.getPosition().x == 720 && sprite_perso.getPosition().y == 580){
 
 
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
-      cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
@@ -211,7 +195,6 @@ if (sprite_perso.getPosition().x == 580 && sprite_perso.getPosition().y == 300){
 
 
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
-      cout<<"ERROR"<<endl; // erreur
       bruitdialogue.setVolume(100.f);
 
              bruitdialogue.play();
