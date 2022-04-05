@@ -22,6 +22,20 @@
 
                }
 
+               if((abs((sprite_perso.getPosition().y >=0 && sprite_perso.getPosition().y <=30)&& (sprite_perso.getPosition().x ==610)))){
+
+                        sprite_perso.setPosition(sprite_perso.getPosition().x -10, sprite_perso.getPosition().y );
+
+               }
+
+
+               if((abs((sprite_perso.getPosition().y >=0 && sprite_perso.getPosition().y <=30)&& (sprite_perso.getPosition().x ==510)))){
+
+                        sprite_perso.setPosition(sprite_perso.getPosition().x +10, sprite_perso.getPosition().y);
+
+               }
+
+
                               if((abs((sprite_perso.getPosition().y >=20 && sprite_perso.getPosition().y <=810)&& (sprite_perso.getPosition().x ==70)))){
 
                                                 sprite_perso.setPosition(sprite_perso.getPosition().x +10, sprite_perso.getPosition().y);
