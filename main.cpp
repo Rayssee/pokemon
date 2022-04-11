@@ -31,6 +31,7 @@ using namespace std;
     sf::Sprite spause2;
     sf::Texture stinky;
     sf::Sprite sstinky;
+    sf::Sprite snuage;
 
 
 
@@ -62,6 +63,7 @@ void texture(){
     sstinky.setScale(0.4f, 0.4f);
     sstinky.setPosition(565, 10);
 
+
 }
 
 void audio(){
@@ -69,7 +71,8 @@ void audio(){
          if (!music.openFromFile("son/ville.ogg"))
       cout<<"ERROR"<<endl; // erreur
 
-             music.play();
+                     music.play();
+             music.setVolume(50.f);
 }
 
 int main()
@@ -91,6 +94,8 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+
+
          while (check == false)
             {
 
@@ -103,7 +108,8 @@ int main()
 
                     check = true;
 
-                    //audio();
+                    audio();
+                    music.setLoop(true);
 
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                     return EXIT_SUCCESS;
@@ -121,7 +127,7 @@ int main()
                 cout<<"ERROR"<<endl;
             spause.setTexture(pauses);
             spause.setPosition(sprite_perso.getPosition().x -250, sprite_perso.getPosition().y -50);
-            spause.setScale(0.7f, 0.7f);
+            spause.setScale(0.5f, 0.5f);
             speed=0;
             smap.setColor(sf::Color(255, 255, 255, 50));
             det=1;
@@ -183,9 +189,11 @@ int main()
 
         window.clear();
         window.draw(smap);
+        window.draw(snuage);
         window.draw(sdialogue);
         window.draw(sdialogue2);
         window.draw(sstinky);
+
         window.draw(sprite_perso);
         window.draw(spause2);
         window.draw(spause);

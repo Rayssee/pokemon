@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <SFML/Audio.hpp>
 
 //#ifndef PERSONNAGE on part du principe qu'on va beaucoup y acceder à partir de plusieurs emplacement
 
@@ -11,6 +12,7 @@ void menupoke();
 void collisions();
 void history();
 void texture();
+
 
 #ifndef PERSONNAGE
 #define PERSONNAGE
@@ -30,6 +32,11 @@ void texture();
     extern sf::RenderWindow window;
     extern sf::Texture stinky;
     extern sf::Sprite sstinky;
+    extern sf::Music music;
+    extern sf::Texture nuage;
+    extern sf::Sprite snuage;
+
+
 
 
 

@@ -7,6 +7,7 @@
         sf::Music bruitdialogue2;
         sf::Texture dialogue2;
         sf:: Sprite sdialogue2;
+
         int i=0;
 
         void sleep(int seconds) {
@@ -66,6 +67,8 @@
         if (!bruitdialogue2.openFromFile("son/receive_poke.ogg"));
               bruitdialogue2.setVolume(100.f);
              bruitdialogue2.play();
+                          music.setVolume(0.f);
+
   }
 
   if(i>=5){
@@ -75,6 +78,8 @@ sstinky.setPosition(1000,1000);
 speed=10;
 sdialogue2.setScale(0.f,0.f);
 bruitdialogue2.setVolume(0.f);
+        music.setVolume(50.f);
+
 
 
   }
