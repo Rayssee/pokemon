@@ -31,7 +31,8 @@ using namespace std;
     sf::Sprite spause2;
     sf::Texture stinky;
     sf::Sprite sstinky;
-    sf::Sprite snuage;
+    
+
 
 
 
@@ -64,6 +65,8 @@ void texture(){
     sstinky.setPosition(565, 10);
 
 
+
+
 }
 
 void audio(){
@@ -88,7 +91,7 @@ int main()
     {
 
 
-        sf::Event event;
+        sf::Event event; 
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
@@ -189,10 +192,10 @@ int main()
 
         window.clear();
         window.draw(smap);
-        window.draw(snuage);
         window.draw(sdialogue);
         window.draw(sdialogue2);
         window.draw(sstinky);
+        window.draw(snuage);
 
         window.draw(sprite_perso);
         window.draw(spause2);
