@@ -31,7 +31,6 @@ using namespace std;
     sf::Sprite spause2;
     sf::Texture stinky;
     sf::Sprite sstinky;
-    sf::Sprite snuage;
 
 
 
@@ -126,7 +125,7 @@ int main()
          if(!pauses.loadFromFile("images/pauseyes.png"))
                 cout<<"ERROR"<<endl;
             spause.setTexture(pauses);
-            spause.setPosition(sprite_perso.getPosition().x -250, sprite_perso.getPosition().y -50);
+            spause.setPosition(sprite_perso.getPosition().x -180, sprite_perso.getPosition().y -180);
             spause.setScale(0.5f, 0.5f);
             speed=0;
             smap.setColor(sf::Color(255, 255, 255, 50));
