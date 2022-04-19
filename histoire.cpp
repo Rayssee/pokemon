@@ -31,7 +31,7 @@
                 if((sprite_perso.getPosition().x >=510 && sprite_perso.getPosition().x <=610)&& (sprite_perso.getPosition().y ==30) && (sf::Keyboard::isKeyPressed(sf::Keyboard::E)))
 
             {
-        dialogue2.loadFromFile("images/boumaaz.png");
+        dialogue2.loadFromFile("images/1.png");
             sdialogue2.setTexture(dialogue2);
             sdialogue2.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 390);
             sdialogue2.setScale(1.f, 0.75f);
@@ -47,7 +47,7 @@
 
 
             if(i==2){
-                dialogue2.loadFromFile("images/dtexte.png");
+                dialogue2.loadFromFile("images/2.png");
             sdialogue2.setTexture(dialogue2);
             sdialogue2.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 390);
             sdialogue2.setScale(1.f, 0.75f);
@@ -57,7 +57,7 @@
 }
      if(i==3){
 
-                dialogue2.loadFromFile("images/alan.png");
+                dialogue2.loadFromFile("images/3.png");
             sdialogue2.setTexture(dialogue2);
             sdialogue2.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 390);
             sdialogue2.setScale(1.f, 0.75f);
@@ -66,7 +66,7 @@
      if(sf::Keyboard::isKeyPressed(sf::Keyboard::E) && i==4){
 
 
-                dialogue2.loadFromFile("images/minart.png");
+                dialogue2.loadFromFile("images/4.png");
             sdialogue2.setTexture(dialogue2);
             sdialogue2.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 390);
             sdialogue2.setScale(1.f, 0.75f);
