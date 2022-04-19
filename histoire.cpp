@@ -10,6 +10,8 @@
         sf::Sprite snuage;
         sf::Texture nuage;
 
+
+
         int i=0;
 
         void sleep(int seconds) {
@@ -92,6 +94,8 @@ bruitdialogue2.setVolume(0.f);
 
 
   }
+
+
 
         }
 

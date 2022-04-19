@@ -5,9 +5,11 @@
 
         using namespace std;
         int incre = 1;
+        int j=1;
 
         void collisions(){
 
+        if(j==1){
     if((abs((sprite_perso.getPosition().x >=510 && sprite_perso.getPosition().x <=610)&& (sprite_perso.getPosition().y ==20) && incre==1)))
     {
                     sprite_perso.setPosition(sprite_perso.getPosition().x, sprite_perso.getPosition().y +10);
@@ -219,4 +221,5 @@ if((abs((sprite_perso.getPosition().x >=180 && sprite_perso.getPosition().x <=43
                                                 sprite_perso.setPosition(sprite_perso.getPosition().x+10, sprite_perso.getPosition().y);
          }
 
+         }
          }

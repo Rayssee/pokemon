@@ -31,6 +31,8 @@ using namespace std;
     sf::Sprite spause2;
     sf::Texture stinky;
     sf::Sprite sstinky;
+    sf::Texture transition;
+        sf::Sprite stransition;
 
 
 
@@ -61,8 +63,6 @@ void texture(){
     sstinky.setTexture(stinky);
     sstinky.setScale(0.4f, 0.4f);
     sstinky.setPosition(565, 10);
-
-
 
 
 }
@@ -131,6 +131,8 @@ int main()
             spause.setScale(0.5f, 0.5f);
             speed=0;
             smap.setColor(sf::Color(255, 255, 255, 50));
+                    sstinky.setColor(sf::Color(255, 255, 255, 50));
+
             det=1;
             }
 
@@ -139,6 +141,7 @@ int main()
         spause.setScale(0.f, 0.f);
         spause2.setScale(0.f, 0.f);
         smap.setColor(sf::Color(255, 255, 255, 255));
+        sstinky.setColor(sf::Color(255, 255, 255, 255));
                 }
 
                                 if(check2==true) {
@@ -147,8 +150,8 @@ int main()
            if(!pause2.loadFromFile("images/pauseno.png"))
                 cout<<"ERROR"<<endl;
             spause2.setTexture(pause2);
-            spause2.setPosition(sprite_perso.getPosition().x -250, sprite_perso.getPosition().y -50);
-            spause2.setScale(0.7f, 0.7f);
+            spause.setPosition(sprite_perso.getPosition().x -180, sprite_perso.getPosition().y -180);
+            spause2.setScale(0.5f, 0.5f);
             det=2;
             spause.setScale(0.f, 0.f);
 
@@ -161,8 +164,8 @@ int main()
                          if(!pauses.loadFromFile("images/pauseyes.png"))
                 cout<<"ERROR"<<endl;
             spause.setTexture(pauses);
-            spause.setPosition(sprite_perso.getPosition().x -250, sprite_perso.getPosition().y -50);
-            spause.setScale(0.7f, 0.7f);
+            spause.setPosition(sprite_perso.getPosition().x -180, sprite_perso.getPosition().y -180);
+            spause.setScale(0.5f, 0.5f);
             det=1;
 
            }
@@ -186,15 +189,26 @@ int main()
         history();
         collisions();
 
+                  if(sprite_perso.getPosition().y==0){
+            sprite_perso.setPosition(560,790);
+            if(!transition.loadFromFile("images/test.jpg"))
+            cout<<"ERROR"<<endl;
+            stransition.setTexture(transition);
+            stransition.setScale(2.9,2.9);
+            smap.setScale(0.f,0.f);
+            j=0;
+
+        }
+
 
 
         window.clear();
         window.draw(smap);
+        window.draw(stransition);
         window.draw(sdialogue);
         window.draw(sdialogue2);
         window.draw(sstinky);
         window.draw(snuage);
-
         window.draw(sprite_perso);
         window.draw(spause2);
         window.draw(spause);

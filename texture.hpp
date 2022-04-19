@@ -26,7 +26,9 @@ void texture();
     extern sf::Texture dialogue2;
     extern sf::Sprite sdialogue2;
     extern float speed;
-    extern sf::Sprite smap;
+    extern sf::Texture transition;
+    extern sf::Sprite stransition;
+    extern sf::Sprite stransition;
     extern sf::Vector2f positions;
     extern sf::View cam;
     extern sf::RenderWindow window;
@@ -35,6 +37,7 @@ void texture();
     extern sf::Music music;
     extern sf::Texture nuage;
     extern sf::Sprite snuage;
+    extern int j;
 
 
 
