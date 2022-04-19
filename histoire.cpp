@@ -7,6 +7,8 @@
         sf::Music bruitdialogue2;
         sf::Texture dialogue2;
         sf:: Sprite sdialogue2;
+        sf::Sprite snuage;
+        sf::Texture nuage;
 
         int i=0;
 
@@ -40,6 +42,8 @@
 
             }
 
+
+
             if(i==2){
                 dialogue2.loadFromFile("images/dtexte.png");
             sdialogue2.setTexture(dialogue2);
@@ -72,6 +76,11 @@
   }
 
   if(i>=5){
+                        if(!nuage.loadFromFile("images/Nuage_anim.png"))
+                        cout<<"ERROR"<<endl;
+                        snuage.setTexture(nuage);
+                        snuage.setScale(0.6f,0.6f);
+                        snuage.setPosition(565, 10);
 
 incre=2;
 sstinky.setPosition(1000,1000);

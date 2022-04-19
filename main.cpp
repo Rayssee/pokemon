@@ -63,6 +63,8 @@ void texture(){
     sstinky.setPosition(565, 10);
 
 
+
+
 }
 
 void audio(){
@@ -188,10 +190,10 @@ int main()
 
         window.clear();
         window.draw(smap);
-        window.draw(snuage);
         window.draw(sdialogue);
         window.draw(sdialogue2);
         window.draw(sstinky);
+        window.draw(snuage);
 
         window.draw(sprite_perso);
         window.draw(spause2);
