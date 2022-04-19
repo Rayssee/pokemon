@@ -200,6 +200,11 @@ int main()
 
         }
 
+        else if(sprite_perso.getPosition().y == 790){
+
+
+        }
+
 
 
         window.clear();
