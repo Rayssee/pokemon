@@ -222,4 +222,16 @@ if((abs((sprite_perso.getPosition().x >=180 && sprite_perso.getPosition().x <=43
          }
 
          }
+         if((abs((sprite_perso.getPosition().y >=300 && sprite_perso.getPosition().y <=810)&& (sprite_perso.getPosition().x ==510)))&& j==0){
+
+                                                sprite_perso.setPosition(sprite_perso.getPosition().x+10, sprite_perso.getPosition().y);
+         }
+         if((abs((sprite_perso.getPosition().y >=300 && sprite_perso.getPosition().y <=810)&& (sprite_perso.getPosition().x ==610)))&& j==0){
+
+                                                sprite_perso.setPosition(sprite_perso.getPosition().x-10, sprite_perso.getPosition().y);
+         }
+         if((abs((sprite_perso.getPosition().x >=520 && sprite_perso.getPosition().x <=600)&& (sprite_perso.getPosition().y ==310)))&& j==0){
+
+                                               sprite_perso.setPosition(sprite_perso.getPosition().x, sprite_perso.getPosition().y+10);
+         }
          }

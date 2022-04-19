@@ -190,8 +190,9 @@ int main()
         collisions();
 
                   if(sprite_perso.getPosition().y==0){
+
             sprite_perso.setPosition(560,790);
-            if(!transition.loadFromFile("images/test.jpg"))
+            if(!transition.loadFromFile("images/map2.jpg"))
             cout<<"ERROR"<<endl;
             stransition.setTexture(transition);
             stransition.setScale(2.9,2.9);
@@ -199,13 +200,6 @@ int main()
             j=0;
 
         }
-
-        else if(sprite_perso.getPosition().y == 790){
-
-
-        }
-
-
 
         window.clear();
         window.draw(smap);
