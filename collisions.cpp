@@ -17,6 +17,7 @@
 
     }
 
+
 //arbre
                if((abs((sprite_perso.getPosition().x >=560 && sprite_perso.getPosition().x <=850)&& (sprite_perso.getPosition().y ==290)))){
 
