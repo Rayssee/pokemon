@@ -29,7 +29,6 @@ void texture();
     extern sf::Texture transition;
     extern sf::Sprite stransition;
     extern sf::Sprite stransition;
-    extern sf::Vector2f positions;
     extern sf::View cam;
     extern sf::RenderWindow window;
     extern sf::Texture stinky;
@@ -38,6 +37,11 @@ void texture();
     extern sf::Texture nuage;
     extern sf::Sprite snuage;
     extern int j;
+    extern sf::Texture mapping;
+    extern sf::Sprite smap;
+    extern sf::Texture map3;
+    extern sf::Sprite smap3;
+
 
 
 

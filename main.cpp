@@ -31,8 +31,8 @@ using namespace std;
     sf::Sprite spause2;
     sf::Texture stinky;
     sf::Sprite sstinky;
-    sf::Texture transition;
-        sf::Sprite stransition;
+
+
 
 
 
@@ -150,7 +150,7 @@ int main()
            if(!pause2.loadFromFile("images/pauseno.png"))
                 cout<<"ERROR"<<endl;
             spause2.setTexture(pause2);
-            spause.setPosition(sprite_perso.getPosition().x -180, sprite_perso.getPosition().y -180);
+            spause2.setPosition(800,600);
             spause2.setScale(0.5f, 0.5f);
             det=2;
             spause.setScale(0.f, 0.f);
@@ -189,21 +189,12 @@ int main()
         history();
         collisions();
 
-                  if(sprite_perso.getPosition().y==0){
 
-            sprite_perso.setPosition(560,790);
-            if(!transition.loadFromFile("images/map2.jpg"))
-            cout<<"ERROR"<<endl;
-            stransition.setTexture(transition);
-            stransition.setScale(2.9,2.9);
-            smap.setScale(0.f,0.f);
-            j=0;
-
-        }
 
         window.clear();
         window.draw(smap);
         window.draw(stransition);
+        window.draw(smap3);
         window.draw(sdialogue);
         window.draw(sdialogue2);
         window.draw(sstinky);

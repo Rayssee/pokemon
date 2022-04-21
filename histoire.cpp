@@ -9,6 +9,10 @@
         sf:: Sprite sdialogue2;
         sf::Sprite snuage;
         sf::Texture nuage;
+        sf::Texture map3;
+        sf::Sprite smap3;
+        sf::Texture transition;
+        sf::Sprite stransition;
 
 
 
@@ -95,6 +99,34 @@ bruitdialogue2.setVolume(0.f);
 
   }
 
+                  if(sprite_perso.getPosition().y==0){
+
+            sprite_perso.setPosition(560,790);
+            transition.loadFromFile("images/map2.jpg");
+            stransition.setTexture(transition);
+            stransition.setScale(2.9,2.9);
+            smap.setScale(0.f,0.f);
+            j=0;
+
+
+        }
+
+        else if(sprite_perso.getPosition().y==810){
+                        smap.setScale(2.9f,2.9f);
+                        stransition.setScale(0.,0.);
+                        j=1;
+                        sprite_perso.setPosition(560,20);
+        }
+
+        else if(j==0 && (sprite_perso.getPosition().y == 320 && sf::Keyboard::isKeyPressed(sf::Keyboard::E))){
+
+    j=2;
+    stransition.setScale(0.f,0.f);
+    map3.loadFromFile("images/argenta.png");
+    smap3.setTexture(map3);
+    smap3.setScale(2.9f,2.9f);
+
+        }
 
 
         }

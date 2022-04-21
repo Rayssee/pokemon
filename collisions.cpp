@@ -235,4 +235,14 @@ if((abs((sprite_perso.getPosition().x >=180 && sprite_perso.getPosition().x <=43
 
                                                sprite_perso.setPosition(sprite_perso.getPosition().x, sprite_perso.getPosition().y+10);
          }
+
+             if((abs((sprite_perso.getPosition().x >=80 && sprite_perso.getPosition().x <=900)&& (sprite_perso.getPosition().y ==800)))&& j==1){
+
+                                               sprite_perso.setPosition(sprite_perso.getPosition().x, sprite_perso.getPosition().y-10);
+         }
+
+     /*     if((abs((sprite_perso.getPosition().x >=80 && sprite_perso.getPosition().x <=900)&& (sprite_perso.getPosition().y ==800)))&& j==2){
+
+                                               sprite_perso.setPosition(sprite_perso.getPosition().x, sprite_perso.getPosition().y-10);
+         }*/
          }
