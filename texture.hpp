@@ -41,14 +41,7 @@ void texture();
     extern sf::Sprite smap;
     extern sf::Texture map3;
     extern sf::Sprite smap3;
-
-
-
-
-
-
-
-
+    extern int a;
 
 
     //gestion FPS

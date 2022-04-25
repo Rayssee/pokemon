@@ -35,7 +35,6 @@ using namespace std;
 
 
 
-
 void texture(){
 
     if(!menu.loadFromFile("images/menu-1.png"))
@@ -181,7 +180,12 @@ int main()
 
                     return EXIT_SUCCESS;
                  }
+
         }
+
+if(j==0 && b%2==0 ||j==1 && b%2==0){
+    speed=0;
+}
 
         deplacements(sprite_perso);
         camera();

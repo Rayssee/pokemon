@@ -14,7 +14,6 @@
     {
                     sprite_perso.setPosition(sprite_perso.getPosition().x, sprite_perso.getPosition().y +10);
 
-
     }
 
 
