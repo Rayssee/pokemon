@@ -31,6 +31,8 @@ using namespace std;
     sf::Sprite spause2;
     sf::Texture stinky;
     sf::Sprite sstinky;
+    sf::Texture chambre;
+    sf::Sprite schambre;
 
 
 
@@ -63,6 +65,10 @@ void texture(){
     sstinky.setScale(0.4f, 0.4f);
     sstinky.setPosition(565, 10);
 
+     if(!chambre.loadFromFile("images/image_maison_1.jpg"))
+            cout<<"ERROR"<<endl;
+    schambre.setTexture(chambre);
+        schambre.setScale(2.9f, 2.9f);
 
 }
 
@@ -196,13 +202,13 @@ if(j==0 && b%2==0 ||j==1 && b%2==0){
 
 
         window.clear();
+        window.draw(schambre);
         window.draw(smap);
         window.draw(stransition);
         window.draw(smap3);
         window.draw(sdialogue);
         window.draw(sdialogue2);
         window.draw(sstinky);
-        window.draw(snuage);
         window.draw(sprite_perso);
         window.draw(spause2);
         window.draw(spause);

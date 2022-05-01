@@ -16,11 +16,10 @@
 
 
         void sleep(int seconds) {
-    /* Init. */
+
     time_t start_time = 0;
     time_t current_time = 0;
 
-    /* Operate. */
     start_time = time(NULL);
     while(current_time-start_time+1 <= seconds) {
         current_time = time(NULL);
