@@ -42,6 +42,10 @@ void texture();
     extern sf::Texture map3;
     extern sf::Sprite smap3;
     extern int a;
+    extern sf::Texture chambre;
+    extern sf::Sprite schambre;
+    extern sf::Texture salon;
+    extern sf::Sprite ssalon;
 
 
     //gestion FPS

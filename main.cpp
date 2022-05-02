@@ -37,6 +37,7 @@ using namespace std;
 
 
 
+
 void texture(){
 
     if(!menu.loadFromFile("images/menu-1.png"))
@@ -65,10 +66,7 @@ void texture(){
     sstinky.setScale(0.4f, 0.4f);
     sstinky.setPosition(565, 10);
 
-     if(!chambre.loadFromFile("images/image_maison_1.jpg"))
-            cout<<"ERROR"<<endl;
-    schambre.setTexture(chambre);
-        schambre.setScale(2.9f, 2.9f);
+
 
 }
 
@@ -88,6 +86,14 @@ int main()
         window.setFramerateLimit(15);
 
             texture();
+
+                 if(!chambre.loadFromFile("images/image_maison_1.jpg"))
+            cout<<"ERROR"<<endl;
+    schambre.setTexture(chambre);
+        schambre.setScale(2.f, 2.f);
+        sprite_perso.setPosition(550,330);
+        j=-1;
+        smap.setScale(0.f,0.f);
 
 
     while (window.isOpen())
@@ -192,7 +198,6 @@ int main()
 if(j==0 && b%2==0 ||j==1 && b%2==0){
     speed=0;
 }
-
         deplacements(sprite_perso);
         camera();
         dial();
@@ -202,8 +207,9 @@ if(j==0 && b%2==0 ||j==1 && b%2==0){
 
 
         window.clear();
-        window.draw(schambre);
         window.draw(smap);
+        window.draw(schambre);
+        window.draw(ssalon);
         window.draw(stransition);
         window.draw(smap3);
         window.draw(sdialogue);

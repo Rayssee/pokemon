@@ -29,6 +29,39 @@
         void history(){
 
 
+        if(j==-1|| j==-2){
+            sstinky.setScale(0.f,0.f);
+        }
+        else if(j==1){
+    sstinky.setScale(0.4f, 0.4f);
+        }
+
+
+
+               if((sprite_perso.getPosition().x>=220 && (sprite_perso.getPosition().x<=270)) &&  (sprite_perso.getPosition().y==150) && j==-1){
+                schambre.setScale(0.f, 0.f);
+                j=-2;
+                salon.loadFromFile("images/image_maison_2.jpg");
+            ssalon.setTexture(salon);
+            ssalon.setScale(2.f, 2.f);
+            sprite_perso.setPosition(250,170);
+
+        }
+
+                    if((sprite_perso.getPosition().x>=220 && (sprite_perso.getPosition().x<=270)) &&  (sprite_perso.getPosition().y==140) && j==-2){
+                        ssalon.setScale(0.f, 0.f);
+                        schambre.setScale(2.f, 2.f);
+                        sprite_perso.setPosition(250, 170);
+                        j=-1;
+                    }
+
+        if((sprite_perso.getPosition().x>=160 && (sprite_perso.getPosition().x<=260)) &&  (sprite_perso.getPosition().y==520) && j==-2){
+
+            ssalon.setScale(0.f, 0.f);
+            smap.setScale(2.9f, 2.9f);
+            j=1;
+            sprite_perso.setPosition(680,300);
+        }
 
                   if(sprite_perso.getPosition().y==0){
 
@@ -42,7 +75,7 @@
 
         }
 
-        else if(sprite_perso.getPosition().y==810){
+        else if(sprite_perso.getPosition().y==810 && j==0){
                         smap.setScale(2.9f,2.9f);
                         stransition.setScale(0.,0.);
                         j=1;
@@ -60,13 +93,13 @@
 
         }
 
-        else if(sprite_perso.getPosition().y==800 && j==2){
+        else if((sprite_perso.getPosition().y==810) && (sprite_perso.getPosition().x>=490) && (sprite_perso.getPosition().x<=540) && j==2){
                         stransition.setScale(2.9f,2.9f);
                         smap3.setScale(0.f,0.f);
                         j=0;
                         sprite_perso.setPosition(560,310);
         }
-
         }
+
 
 

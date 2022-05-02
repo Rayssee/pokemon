@@ -21,12 +21,10 @@ if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
 a++;
 if (sprite_perso.getPosition().x == 680 && sprite_perso.getPosition().y == 300){
 
-        dialogue.loadFromFile("images/boumaaz.png");
-    sdialogue.setTexture(dialogue);
-    sdialogue.setPosition(sprite_perso.getPosition().x - 370, sprite_perso.getPosition().y + 150);
-    sdialogue.setScale(1.f, 0.75f);
-    speed=0;
-
+    smap.setScale(0.f,0.f);
+    ssalon.setScale(2.f,2.f);
+    j=-2;
+    sprite_perso.setPosition(220,490);
 
        if (!bruitdialogue.openFromFile("son/dialogues.ogg"))
       cout<<"ERROR"<<endl; // erreur

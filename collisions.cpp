@@ -6,6 +6,8 @@
         using namespace std;
         int incre = 1;
         int j=1;
+        sf::Texture salon;
+        sf::Sprite ssalon;
 
         void collisions(){
 
@@ -244,4 +246,30 @@ if((abs((sprite_perso.getPosition().x >=180 && sprite_perso.getPosition().x <=43
 
                                                sprite_perso.setPosition(sprite_perso.getPosition().x, sprite_perso.getPosition().y-10);
          }*/
-         }
+
+                          if((sprite_perso.getPosition().x>=220 && (sprite_perso.getPosition().x<=270)) &&  (sprite_perso.getPosition().y==150) && j==-1){
+                schambre.setScale(0.f, 0.f);
+                j=-2;
+                salon.loadFromFile("images/image_maison_2.jpg");
+            ssalon.setTexture(salon);
+            ssalon.setScale(2.f, 2.f);
+            sprite_perso.setPosition(250,170);
+
+        }
+
+                    if((sprite_perso.getPosition().x>=220 && (sprite_perso.getPosition().x<=270)) &&  (sprite_perso.getPosition().y==140) && j==-2){
+                        ssalon.setScale(0.f, 0.f);
+                        schambre.setScale(2.f, 2.f);
+                        sprite_perso.setPosition(250, 170);
+                        j=-1;
+                    }
+
+        if((sprite_perso.getPosition().x>=160 && (sprite_perso.getPosition().x<=260)) &&  (sprite_perso.getPosition().y==520) && j==-2){
+
+            ssalon.setScale(0.f, 0.f);
+            smap.setScale(2.9f, 2.9f);
+            j=1;
+            sprite_perso.setPosition(680,300);
+        }
+
+}
