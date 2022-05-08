@@ -33,6 +33,9 @@ using namespace std;
     sf::Sprite sstinky;
     sf::Texture chambre;
     sf::Sprite schambre;
+    sf::Texture pause3;
+    sf::Sprite spause3;
+
 
 
 
@@ -66,8 +69,11 @@ void texture(){
     sstinky.setScale(0.4f, 0.4f);
     sstinky.setPosition(565, 10);
 
-
-
+    if(!chambre.loadFromFile("images/image_maison_2.jpg")){
+    cout<<"ERROR"<<endl;
+    schambre.setTexture(salon);
+    j=-2;
+    }
 }
 
 void audio(){
@@ -81,7 +87,6 @@ void audio(){
 
 int main()
 {
-
     sf::RenderWindow window(sf::VideoMode(screenW, screenH), "Pokemon version Or!");
         window.setFramerateLimit(15);
 
@@ -94,6 +99,7 @@ int main()
         sprite_perso.setPosition(550,330);
         j=-1;
         smap.setScale(0.f,0.f);
+
 
 
     while (window.isOpen())
@@ -135,6 +141,7 @@ int main()
         b++;
         det=0;
 
+
          if(!pauses.loadFromFile("images/pauseyes.png"))
                 cout<<"ERROR"<<endl;
             spause.setTexture(pauses);
@@ -151,32 +158,32 @@ int main()
         check2=false;
         spause.setScale(0.f, 0.f);
         spause2.setScale(0.f, 0.f);
+        spause3.setScale(0.f, 0.f);
         smap.setColor(sf::Color(255, 255, 255, 255));
         sstinky.setColor(sf::Color(255, 255, 255, 255));
                 }
 
                                 if(check2==true) {
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-           if(!pause2.loadFromFile("images/pauseno.png"))
-                cout<<"ERROR"<<endl;
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad2)){
+           pause2.loadFromFile("images/pauseno.png");
             spause2.setTexture(pause2);
-            spause2.setPosition(800,600);
+            spause2.setPosition(sprite_perso.getPosition().x -180, sprite_perso.getPosition().y -180);
             spause2.setScale(0.5f, 0.5f);
             det=2;
             spause.setScale(0.f, 0.f);
-
+            spause3.setScale(0.f, 0.f);
 
            }
 
-                  if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+                  if(sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad1)){
 
-                b=2;
-                         if(!pauses.loadFromFile("images/pauseyes.png"))
-                cout<<"ERROR"<<endl;
+                         pauses.loadFromFile("images/pauseyes.png");
             spause.setTexture(pauses);
             spause.setPosition(sprite_perso.getPosition().x -180, sprite_perso.getPosition().y -180);
             spause.setScale(0.5f, 0.5f);
+            spause3.setScale(0.f, 0.f);
+
             det=1;
 
            }
@@ -188,12 +195,28 @@ int main()
                 }
 
 
-                 if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && det==1){
+                 if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && det==3){
 
                     return EXIT_SUCCESS;
                  }
 
+
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad3))
+                {
+
+                    spause.setScale(0.f,0.f);
+                    spause2.setScale(0.f,0.f);
+                    pause3.loadFromFile("images/sauver_grise_copie.png");
+                    spause3.setPosition(sprite_perso.getPosition().x -180, sprite_perso.getPosition().y -180);
+                    spause3.setTexture(pause3);
+                    spause3.setScale(0.5f, 0.5f);
+                    speed=0;
+                    smap.setColor(sf::Color(255, 255, 255, 50));
+                    sstinky.setColor(sf::Color(255, 255, 255, 50));
+                    det=3;
+                 }
         }
+
 
 if(j==0 && b%2==0 ||j==1 && b%2==0){
     speed=0;
@@ -208,6 +231,7 @@ if(j==0 && b%2==0 ||j==1 && b%2==0){
 
         window.clear();
         window.draw(smap);
+        window.draw(ssalon);
         window.draw(schambre);
         window.draw(ssalon);
         window.draw(stransition);
@@ -216,8 +240,10 @@ if(j==0 && b%2==0 ||j==1 && b%2==0){
         window.draw(sdialogue2);
         window.draw(sstinky);
         window.draw(sprite_perso);
+        window.draw(spause3);
         window.draw(spause2);
         window.draw(spause);
+        window.draw(spause3);
         window.setView(cam);
         window.display();
 
