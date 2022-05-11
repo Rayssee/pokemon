@@ -16,6 +16,7 @@ using namespace std;
     bool check2=false;
     int offsetX =32, offsetY=32;
 
+
 //sf::RectangleShape maison1(sf::Vector2f(120.f, 50.f));
 
     sf::Music music;
@@ -173,7 +174,6 @@ int main()
             det=2;
             spause.setScale(0.f, 0.f);
             spause3.setScale(0.f, 0.f);
-
            }
 
                   if(sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad1)){
@@ -215,6 +215,7 @@ int main()
                     sstinky.setColor(sf::Color(255, 255, 255, 50));
                     det=3;
                  }
+
         }
 
 
@@ -244,6 +245,7 @@ if(j==0 && b%2==0 ||j==1 && b%2==0){
         window.draw(spause2);
         window.draw(spause);
         window.draw(spause3);
+        window.draw(sscenecombat1);
         window.setView(cam);
         window.display();
 

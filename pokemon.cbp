@@ -52,6 +52,7 @@
 			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
 		</ExtraCommands>
 		<Unit filename="collisions.cpp" />
+		<Unit filename="combat.cpp" />
 		<Unit filename="dialogues.cpp" />
 		<Unit filename="histoire.cpp" />
 		<Unit filename="main.cpp" />

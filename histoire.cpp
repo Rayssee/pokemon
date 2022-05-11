@@ -14,18 +14,6 @@
 
 
 
-
-        void sleep(int seconds) {
-
-    time_t start_time = 0;
-    time_t current_time = 0;
-
-    start_time = time(NULL);
-    while(current_time-start_time+1 <= seconds) {
-        current_time = time(NULL);
-    }
-}
-
         void history(){
 
 
@@ -93,13 +81,27 @@
 
         }
 
+
         else if((sprite_perso.getPosition().y==810) && (sprite_perso.getPosition().x>=490) && (sprite_perso.getPosition().x<=540) && j==2){
                         stransition.setScale(2.9f,2.9f);
                         smap3.setScale(0.f,0.f);
                         j=0;
                         sprite_perso.setPosition(560,310);
         }
+
+
+        else if(j==2 && det==1 || j==2 && det==2 || j==2 && det==3)
+        {
+        speed=0;
+
+        if(check2==false){
+            speed=10;
         }
+        }
+
+        pokecombat();
+
+}
 
 
 

@@ -12,6 +12,7 @@ void menupoke();
 void collisions();
 void history();
 void texture();
+void pokecombat();
 
 
 #ifndef PERSONNAGE
@@ -46,6 +47,11 @@ void texture();
     extern sf::Sprite schambre;
     extern sf::Texture salon;
     extern sf::Sprite ssalon;
+    extern int det;
+    extern bool check2;
+    extern int pokemon;
+    extern sf::Texture scenecombat1;
+    extern sf::Sprite sscenecombat1;
 
 
     //gestion FPS
