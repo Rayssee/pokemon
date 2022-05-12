@@ -51,7 +51,7 @@ bool sceneCombat=false;
 
             if(j==2 && sprite_perso.getPosition().y==610 && sprite_perso.getPosition().x>480 && sprite_perso.getPosition().x<580)
             {
-                sceneCombat=true;
+                sceneCombat=false;
 
             }
                  if(sceneCombat==true){
@@ -63,6 +63,5 @@ bool sceneCombat=false;
                 smap3.setScale(0.f,0.f);
                 speed=0;
             }
-
 
 }

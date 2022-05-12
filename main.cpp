@@ -93,8 +93,7 @@ int main()
 
             texture();
 
-                 if(!chambre.loadFromFile("images/image_maison_1.jpg"))
-            cout<<"ERROR"<<endl;
+                 chambre.loadFromFile("images/image_maison_1.jpg");
     schambre.setTexture(chambre);
         schambre.setScale(2.f, 2.f);
         sprite_perso.setPosition(550,330);

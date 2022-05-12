@@ -10,9 +10,9 @@
 int a=0;
 sf::Music bruitdialogue;
 using namespace std;
- sf::Music bruitdialogue2;
-        sf::Texture dialogue2;
-        sf:: Sprite sdialogue2;
+sf::Music bruitdialogue2;
+sf::Texture dialogue2;
+sf:: Sprite sdialogue2;
 int i=0;
 
 void dial(){
